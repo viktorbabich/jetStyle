@@ -63,7 +63,7 @@ h1 {
 
 /*header*/
 header {
-	padding-top: 20px;
+	padding: 20px 0;
 }
 .social div {
 	float: right;
@@ -73,6 +73,9 @@ header {
 	font-size: 16px;
 	color: #b1b0b1;
 	padding-right: 10px;
+}
+.microsoft {
+	float: left;
 }
 /*фон первого блока*/
 .back1 {
@@ -182,8 +185,16 @@ color: rgb(197, 213, 51);
 .circle span {
 	color: white;
 }
-.line {
-	display: none;
+.line {	
+	position: absolute;
+	background: #00abec;
+	height: 2px;
+	width: 80%;
+	margin: 0 auto;
+	top: 50px;
+	left: 10%;
+	z-index: -1;
+	display: block;
 }
 .pos {
 	position: relative;
@@ -210,23 +221,24 @@ color: rgb(197, 213, 51);
 .container .cols.col-10 {width: 83.33333333%;}
 .container .cols.col-11 {width: 91.666666667%;}
 .container .cols.col-12 {width: 100%;}
-.line {	position: absolute;
-	background: #00abec;
-	height: 2px;
-	width: 80%;
-	margin: 0 auto;
-	top: 50px;
-	left: 10%;
-	z-index: -1;
-	display: block;}
 }
 
 
 
 
 
-
-@media screen and (max-width: 1280px) and (min-width: 550px) {
+@media screen and (max-width: 1231px) and (min-width: 550px) {
 	.medium {width: 50% !important; } 
 	.sources {height: auto; min-height: 150px;}
 }
+
+
+@media screen and (max-width: 760px) {
+	.medium1 {width: 100% !important;}
+	.socialtext {display: none;}
+	.line {display: none;}
+} 
+
+@media screen and (max-width: 760px) and (min-width: 550px) {
+	.medium2 {width: 50% !important;}
+} 
