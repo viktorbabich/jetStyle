@@ -22,7 +22,8 @@ h1 {
 }
 
 .container {
-	width: 75%;
+	width: 100%;
+	max-width: 960px;
 	margin: 0 auto;
 /*	background-color: #d2d2d2;*/
 }
@@ -86,6 +87,8 @@ h1 {
 	background: radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1);
 	border-top: 5px solid #eee;
 	height: 100%;
+	max-width: 100%;
+
 }
 .picture {
 background: url(resources/picture.png) no-repeat center;
@@ -99,8 +102,60 @@ height: 500px;
 	font-weight: lighter;
 	margin: 20px 0;
 	font-family: Segoe Ui; 
+	position: relative;
 
 }
+
+
+
+/*.cloud1 {
+	position: fixed;
+	left: -400px;
+	top: 150px;
+	opacity: 0.5;
+	-webkit-animation: cloud1 5s;
+ 	animation: cloud1 5s;
+ 	animation-iteration-count: infinite;
+}
+
+
+@keyframes cloud1 {
+	from {	
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-50px)
+	} 
+	to {
+		transform: translateY(0)
+	} 
+}
+
+.cloud2 {
+	position: fixed;
+	left: 1060px;
+	top: 150px;
+	opacity: 0.5;
+	-webkit-animation: cloud2 5s;
+ 	animation: cloud2 5s;
+ 	animation-iteration-count: infinite;
+}
+
+@keyframes cloud2 {
+	from {	
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(50px)
+	} 
+	to {
+		transform: translateY(0)
+	} 
+}
+*/
+
+
+
 
 .mainblock p {
 	margin-bottom: 20px;
@@ -261,3 +316,5 @@ color: rgb(197, 213, 51);
 	.medium2  {width: 33% !important; height: 150px;}
 
 } 
+
+
