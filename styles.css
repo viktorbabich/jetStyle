@@ -86,15 +86,13 @@ h1 {
 .back1 {
 	background: radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1);
 	border-top: 5px solid #eee;
-	height: 100%;
-	max-width: 100%;
-
+	overflow: hidden;
 }
-.picture {
+/*.picture {
 background: url(resources/picture.png) no-repeat center;
 background-size: contain;
 height: 500px;
-} 
+} */
 
 /*первый блок*/
 .mainblock {
@@ -102,8 +100,10 @@ height: 500px;
 	font-weight: lighter;
 	margin: 20px 0;
 	font-family: Segoe Ui; 
+	background: url(resources/picture1.png) no-repeat right ;
+	background-size: contain;
+	height: 450px;	
 	position: relative;
-
 }
 
 
@@ -240,6 +240,53 @@ color: rgb(197, 213, 51);
 
 
 
+.cloud1 {
+	position: absolute;
+	left: -600px;
+	top: 50px;
+	opacity: 0.5;
+	-webkit-animation: cloud1 5s;
+ 	animation: cloud1 5s;
+ 	animation-iteration-count: infinite;
+}
+
+.cloud2 {
+	position: absolute;
+	left: 1060px;
+	top: 100px;
+	opacity: 0.5;
+	-webkit-animation: cloud2 5s;
+ 	animation: cloud2 5s;
+ 	animation-iteration-count: infinite;
+}
+@keyframes cloud1 {
+	from {	
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(20px)
+	} 
+	to {
+		transform: translateY(0)
+	} 
+}
+@keyframes cloud2 {
+	from {	
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-20px)
+	} 
+	to {
+		transform: translateY(0)
+	} 
+}
+
+
+
+
+
+
 /*последний блок*/
 .circle {
 	width: 70px;
@@ -258,7 +305,7 @@ color: rgb(197, 213, 51);
 .line {	
 	position: absolute;
 	background: #00abec;
-	height: 2px;
+	height: 3px;
 	width: 80%;
 	margin: 0 auto;
 	top: 50px;
@@ -288,7 +335,6 @@ color: rgb(197, 213, 51);
 	.company p {font-size: 14px;}
 	.sources {height: auto; min-height: 100px; font-size: 16px;}
 	.pos p {font-size: 16px;}
-
 }
 
 
@@ -310,6 +356,9 @@ color: rgb(197, 213, 51);
 @media screen and (max-width: 960px) {
 	.test{width: 100% !important;}
 	.test img {display: none;}
+	.mainblock .medium1 {width: 100% !important;}
+	.mainblock {background: none; height: auto;}
+	.back1 {height: auto;}
 } 
 
 @media screen and (max-width: 900px)  and (min-width: 761px) {
