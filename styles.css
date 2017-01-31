@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'Myriad Pro' sans-serif ;
+  src: url(resources/MyriadPro-Regular.otf) format('truetype'),
+  src: url(resources/MyriadPro-Bold.otf) format('truetype'),
+  src: url(resources/MyriadPro-Light.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Segoe Ui';
+  src: url(resources/segoeuil.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Segoe Ui SL';
+  src: url(resources/segoeuil.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,12 +26,13 @@
 }
 
 body h1 {
-	font-family: 'Segoe Ui'; 
+	font-family: 'Segoe Ui', Geneva, Arial, Helvetica, sans-serif;  
 }
 body {
-	font-family: 'Myriad Pro';
+	font-family: 'Myriad Pro', Geneva, Arial, Helvetica, sans-serif;
 	font-size: 18px;
-	color: #1c2532;
+	color: #1c2532; 
+	overflow-X: hidden; 
 }
 img {
 	max-width: 100%;
@@ -87,7 +109,7 @@ h1 {
 .back1 {
 	background: radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1);
 	border-top: 5px solid #eee;
-	overflow: hidden;
+/*	overflow-X: hidden;*/
 }
 
 /*первый блок*/
@@ -96,7 +118,7 @@ h1 {
 	color: white;
 	font-weight: lighter;
 	margin: 20px 0;
-	font-family: Segoe Ui; 
+	font-family: 'Segoe Ui', Geneva, Arial, Helvetica, sans-serif; 
 	background: url(resources/picture1.png) no-repeat right ;
 	background-size: contain;
 	height: 450px;	
@@ -117,7 +139,6 @@ h1 {
 	left: -570px;
 	top: 50px;
 	opacity: 0.2;
-	-webkit-animation: cloud1 5s;
  	animation: cloud1 5s;
  	animation-iteration-count: infinite;
 }
@@ -127,7 +148,6 @@ h1 {
 	left: 1060px;
 	top: 100px;
 	opacity: 0.2;
-	-webkit-animation: cloud2 5s;
  	animation: cloud2 5s;
  	animation-iteration-count: infinite;
 }
@@ -156,9 +176,7 @@ h1 {
 
 /*второй блок с компаниями*/
 
-.back2 {
-		overflow: hidden;
-}
+
 .clouds {
 		position: relative;
 }
@@ -169,18 +187,15 @@ h1 {
 	right: 1100px;
 	top: -100px;
 	opacity: 0.1;
-	-webkit-animation: cloud3 5s;
  	animation: cloud3 5s;
  	animation-iteration-count: infinite;
 }
-
 .cloud4 {
 	width: 80%;
 	position: absolute;
 	left: 1060px;
 	top: 0px;
 	opacity: 0.1;
-	-webkit-animation: cloud4 5s;
  	animation: cloud4 5s;
  	animation-iteration-count: infinite;
 }
@@ -214,6 +229,9 @@ h1 {
 	border: 2px solid #d7d7d7;
 	padding: 5px 15px;
 	filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
 	width: 100%;
 }
 .company p {
@@ -224,6 +242,9 @@ h1 {
 }
 .company:hover img {
 	border: 3px solid #7bb63c;
+	-ms-filter: none;
+	-webkit-filter: none;
+	-moz-filter: none;
 	filter: none;
 	margin-bottom: -1px;
 
@@ -234,7 +255,7 @@ h1 {
 
 /*фон третьего блока*/
 
-.back3 {
+.back2 {
 	background-color: rgb(0, 120, 215);
 	height: 100%;
 	margin-top: 40px;
@@ -266,6 +287,7 @@ h1 {
 }
 span {
 color: rgb(197, 213, 51);
+font-weight: bolder;
 }
 
 /*последний блок*/
@@ -310,24 +332,24 @@ color: rgb(197, 213, 51);
 }
 
 @media screen and (max-width: 480px) {
-	.container .cols {	width: 100% !important;}	
+	.container .cols {	width: 100% !important;}
+	.steps p {font-size: 18px;}	
 }
 
 @media screen and (max-width: 1234px) and (min-width: 481px) {
 	.small {width: 50% !important; }
-	.company p {font-size: 14px;}
-	.sources {height: auto; min-height: 100px; font-size: 16px;}
-	.pos p {font-size: 16px;}
+	.company p {font-size: 16px;}
+	.sources {height: auto; min-height: 100px; font-size: 18px;}
+	.steps p {font-size: 16px;}
 }
 
 
 @media screen and (max-width: 760px) {
 	.small {width: 100% !important; }
 	.medium {width: 100% !important;}
-	.company p {font-size: 14px;}
 	.sources {height: auto; min-height: 60px;}
 	.line {display: none;}
-	.pos p {font-size: 18px;}
+	.steps p {font-size: 18px;}
 	.social p {display: none;}
 
 } 
