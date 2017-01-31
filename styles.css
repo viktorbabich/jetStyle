@@ -78,21 +78,28 @@ h1 {
 }
 
 
-
+	/*radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1)*/
 
 
 /*фон первого блока*/
 .back1 {
-	background-image: radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1);
+	background: radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1);
 	border-top: 5px solid #eee;
-	height: auto;
+	height: 100%;
 }
+.picture {
+background: url(resources/picture.png) no-repeat center;
+background-size: contain;
+height: 500px;
+} 
+
 /*первый блок*/
 .mainblock {
 	color: white;
 	font-weight: lighter;
 	margin: 20px 0;
 	font-family: Segoe Ui; 
+
 }
 
 .mainblock p {
@@ -111,8 +118,11 @@ h1 {
 
 
 /*второй блок с компаниями*/
+
+
 .company {
 	margin: 20px 10px;
+	
 }
 
 .company img {
@@ -220,19 +230,18 @@ color: rgb(197, 213, 51);
 
 @media screen and (max-width: 1234px) and (min-width: 481px) {
 	.medium {width: 50% !important; }
+	.company p {font-size: 14px;}
+	.sources {height: auto; min-height: 100px; font-size: 16px;}
+	.pos p {font-size: 16px;}
 
-	.company p {font-size: 18px;}
-	.sources {height: auto; min-height: 120px;}
-	.pos p {font-size: 15px;}
 }
 
 
 @media screen and (max-width: 760px) {
 	.medium {width: 100% !important; }
 	.medium1 {width: 100% !important;}
-	.company img {filter: none;}
 	.company p {font-size: 14px;}
-	.sources {height: auto; min-height: 60px; font-size: 16px;}
+	.sources {height: auto; min-height: 60px;}
 	.line {display: none;}
 	.pos p {font-size: 18px;}
 	.social p {display: none;}
@@ -245,9 +254,10 @@ color: rgb(197, 213, 51);
 
 @media screen and (max-width: 960px) {
 	.test{width: 100% !important;}
-	.test img{display: none;}
+	.test img {display: none;}
 } 
 
 @media screen and (max-width: 900px)  and (min-width: 761px) {
-	.medium2  {width: 33% !important;}
+	.medium2  {width: 33% !important; height: 150px;}
+
 } 
