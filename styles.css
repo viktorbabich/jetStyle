@@ -68,6 +68,9 @@ h1 {
 	margin-left: 5px;
 	padding: 22px 0 0 0;
 }
+.social:first-child {
+		padding-right: 10px;
+}
 .social p {
 	font-size: 16px;
 	color: #b1b0b1;
@@ -75,26 +78,20 @@ h1 {
 }
 .microsoft {
 	float: left;
-	padding: 22px 0 18px 0;
+	padding: 22px 0 18px 10px;
 }
 
 
-	/*radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1)*/
-
-
 /*фон первого блока*/
+
 .back1 {
 	background: radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1);
 	border-top: 5px solid #eee;
 	overflow: hidden;
 }
-/*.picture {
-background: url(resources/picture.png) no-repeat center;
-background-size: contain;
-height: 500px;
-} */
 
 /*первый блок*/
+
 .mainblock {
 	color: white;
 	font-weight: lighter;
@@ -105,146 +102,21 @@ height: 500px;
 	height: 450px;	
 	position: relative;
 }
-
-
-
-/*.cloud1 {
-	position: fixed;
-	left: -400px;
-	top: 150px;
-	opacity: 0.5;
-	-webkit-animation: cloud1 5s;
- 	animation: cloud1 5s;
- 	animation-iteration-count: infinite;
-}
-
-
-@keyframes cloud1 {
-	from {	
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(-50px)
-	} 
-	to {
-		transform: translateY(0)
-	} 
-}
-
-.cloud2 {
-	position: fixed;
-	left: 1060px;
-	top: 150px;
-	opacity: 0.5;
-	-webkit-animation: cloud2 5s;
- 	animation: cloud2 5s;
- 	animation-iteration-count: infinite;
-}
-
-@keyframes cloud2 {
-	from {	
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(50px)
-	} 
-	to {
-		transform: translateY(0)
-	} 
-}
-*/
-
-
-
-
 .mainblock p {
 	margin-bottom: 20px;
 	z-index: 1000;
 	height: 100%;
 	width: 100%;
 }
-/*.mainblock img {
-	width: 100%;
-} 
-*/
 .mainblock h1 {
 	margin: 60px 0 20px 0;
 }
 
-
-/*второй блок с компаниями*/
-
-
-.company {
-	margin: 20px 10px;
-	
-}
-
-.company img {
-	border: 2px solid #d7d7d7;
-	padding: 5px 15px;
-	filter: grayscale(100%);
-	width: 100%;
-}
-.company p {
-	font-size: 22px;
-	font-weight: bolder;
-	max-width: 100%;
-	margin-top: 10px;
-}
-.company:hover img {
-	border: 3px solid #7bb63c;
-	filter: none;
-	margin-bottom: -1px;
-
-}
-.company:hover p {
-	color: #7bb63c;
-}
-
-
-/*фон третьего блока*/
-.back2 {
-	background-color: rgb(0, 120, 215);
-	height: 100%;
-	margin-top: 40px;
-}
-
-.test {
-	margin-bottom: 0 !important;
-}
-.test p {
-	padding: 50px 0;
-}
-.test img {
-	margin-left: 15px;
-}
-
-
-/*блок полезных ресурсов*/
-.sources {
-	color: rgb(0, 120, 215);;
-	border: 2px solid rgb(0, 120, 215);
-	height: 100%;
-	width: 100%;
-	padding: 10px 20px;
-}
-.sources:hover {
-	border-color: rgb(123, 182, 60);
-	color: white;
-	background-color: rgb(123, 182, 60);
-}
-span {
-color: rgb(197, 213, 51);
-}
-
-
-
 .cloud1 {
 	position: absolute;
-	left: -600px;
+	left: -570px;
 	top: 50px;
-	opacity: 0.5;
+	opacity: 0.2;
 	-webkit-animation: cloud1 5s;
  	animation: cloud1 5s;
  	animation-iteration-count: infinite;
@@ -254,7 +126,7 @@ color: rgb(197, 213, 51);
 	position: absolute;
 	left: 1060px;
 	top: 100px;
-	opacity: 0.5;
+	opacity: 0.2;
 	-webkit-animation: cloud2 5s;
  	animation: cloud2 5s;
  	animation-iteration-count: infinite;
@@ -282,12 +154,122 @@ color: rgb(197, 213, 51);
 	} 
 }
 
+/*второй блок с компаниями*/
 
+.back2 {
+		overflow: hidden;
+}
+.clouds {
+		position: relative;
+}
 
+.cloud3 {
+	width: 80%;
+	position: absolute;
+	right: 1100px;
+	top: -100px;
+	opacity: 0.1;
+	-webkit-animation: cloud3 5s;
+ 	animation: cloud3 5s;
+ 	animation-iteration-count: infinite;
+}
 
+.cloud4 {
+	width: 80%;
+	position: absolute;
+	left: 1060px;
+	top: 0px;
+	opacity: 0.1;
+	-webkit-animation: cloud4 5s;
+ 	animation: cloud4 5s;
+ 	animation-iteration-count: infinite;
+}
+@keyframes cloud3 {
+	from {	
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px)
+	} 
+	to {
+		transform: translateY(0)
+	} 
+}
+@keyframes cloud4 {
+	from {	
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(20px)
+	} 
+	to {
+		transform: translateY(0)
+	} 
+}
+.company {
+	margin: 20px 10px;
+}
 
+.company img {
+	border: 2px solid #d7d7d7;
+	padding: 5px 15px;
+	filter: grayscale(100%);
+	width: 100%;
+}
+.company p {
+	font-size: 22px;
+	font-weight: bolder;
+	max-width: 100%;
+	margin-top: 10px;
+}
+.company:hover img {
+	border: 3px solid #7bb63c;
+	filter: none;
+	margin-bottom: -1px;
+
+}
+.company:hover p {
+	color: #7bb63c;
+}
+
+/*фон третьего блока*/
+
+.back3 {
+	background-color: rgb(0, 120, 215);
+	height: 100%;
+	margin-top: 40px;
+}
+
+.space {
+	margin-bottom: 0 !important;
+}
+.space p {
+	padding: 50px 0;
+}
+.space img {
+	margin-left: 15px;
+}
+
+/*блок полезных ресурсов*/
+
+.sources {
+	color: rgb(0, 120, 215);;
+	border: 2px solid rgb(0, 120, 215);
+	height: 100%;
+	width: 100%;
+	padding: 10px 20px;
+}
+.sources:hover {
+	border-color: rgb(123, 182, 60);
+	color: white;
+	background-color: rgb(123, 182, 60);
+}
+span {
+color: rgb(197, 213, 51);
+}
 
 /*последний блок*/
+
 .circle {
 	width: 70px;
 	height: 70px;
@@ -313,15 +295,15 @@ color: rgb(197, 213, 51);
 	z-index: -1;
 	display: block;
 }
-.pos {
+.steps {
 	position: relative;
 }
-.pos p {
+.steps p {
 	text-align: center;
 	padding: 15px 0;
 	font-weight: lighter;
 }
-.pos span {
+.steps span {
 	font-size: 48px;
 	color: white;
 }
@@ -354,15 +336,15 @@ color: rgb(197, 213, 51);
 } 
 
 @media screen and (max-width: 960px) {
-	.test{width: 100% !important;}
-	.test img {display: none;}
+	.space{width: 100% !important;}
+	.space img {display: none;}
 	.mainblock .medium1 {width: 100% !important;}
 	.mainblock {background: none; height: auto;}
 	.back1 {height: auto;}
 } 
 
 @media screen and (max-width: 900px)  and (min-width: 761px) {
-	.medium2  {width: 33% !important; height: 150px;}
+	.medium2  {width: 33% !important; height: 200px;}
 
 } 
 
