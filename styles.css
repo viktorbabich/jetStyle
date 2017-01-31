@@ -24,7 +24,7 @@ h1 {
 .container {
 	width: 75%;
 	margin: 0 auto;
-	/*background-color: #d2d2d2;*/
+/*	background-color: #d2d2d2;*/
 }
 
 .container .cols {
@@ -61,21 +61,26 @@ h1 {
 }
 
 /*header*/
-header {
-	padding: 20px 0;
-}
-.social div {
+
+.social {
 	float: right;
 	margin-left: 5px;
+	padding: 22px 0 0 0;
 }
 .social p {
 	font-size: 16px;
 	color: #b1b0b1;
-	padding-right: 10px;
+	padding-right: 20px;
 }
 .microsoft {
 	float: left;
+	padding: 22px 0 18px 0;
 }
+
+
+
+
+
 /*фон первого блока*/
 .back1 {
 	background-image: radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1);
@@ -107,7 +112,7 @@ header {
 
 /*второй блок с компаниями*/
 .company {
-	margin: 20px 0;
+	margin: 20px 10px;
 }
 
 .company img {
@@ -139,17 +144,17 @@ header {
 	height: 100%;
 	margin-top: 40px;
 }
-.vertical {
-	line-height: 155px;
+
+.test {
+	margin-bottom: 0 !important;
+}
+.test p {
+	padding: 50px 0;
+}
+.test img {
+	margin-left: 15px;
 }
 
-.solutions img {
-	vertical-align: middle;
-	padding-left: 20px;
-}
-.solutions p {
-	padding: 60px 0;
-}
 
 /*блок полезных ресурсов*/
 .sources {
@@ -178,11 +183,12 @@ color: rgb(197, 213, 51);
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
-	text-align: center;
 	margin: 0 auto;
 }
-.circle span {
+.circle p {
 	color: white;
+	padding-top: 5px !important;
+	text-align: center;
 }
 .line {	
 	position: absolute;
@@ -205,29 +211,43 @@ color: rgb(197, 213, 51);
 }
 .pos span {
 	font-size: 48px;
+	color: white;
 }
 
-@media screen and (max-width: 550px) {
-	.container .cols {	width: 100% !important;}
-	.socialtext {display: none;}
+@media screen and (max-width: 480px) {
+	.container .cols {	width: 100% !important;}	
 }
 
-@media screen and (max-width: 1231px) and (min-width: 551px) {
+@media screen and (max-width: 1234px) and (min-width: 481px) {
 	.medium {width: 50% !important; }
-	.medium2  {width: 50% !important;}
+
 	.company p {font-size: 18px;}
 	.sources {height: auto; min-height: 120px;}
+	.pos p {font-size: 15px;}
 }
 
 
 @media screen and (max-width: 760px) {
 	.medium {width: 100% !important; }
 	.medium1 {width: 100% !important;}
-	.sources {height: auto; min-height: 60px; font-size: 12px}
+	.company img {filter: none;}
+	.company p {font-size: 14px;}
+	.sources {height: auto; min-height: 60px; font-size: 16px;}
 	.line {display: none;}
+	.pos p {font-size: 18px;}
+	.social p {display: none;}
 
 } 
 
-@media screen and (max-width: 760px) and (min-width: 550px) {
+@media screen and (max-width: 760px) and (min-width: 481px) {
 	.medium2 {width: 50% !important;}
+} 
+
+@media screen and (max-width: 960px) {
+	.test{width: 100% !important;}
+	.test img{display: none;}
+} 
+
+@media screen and (max-width: 900px)  and (min-width: 761px) {
+	.medium2  {width: 33% !important;}
 } 
