@@ -5,10 +5,10 @@
 }
 
 body h1 {
-	font-family: Segoe Ui; 
+	font-family: 'Segoe Ui'; 
 }
 body {
-	font-family: Myriad Pro;
+	font-family: 'Myriad Pro';
 	font-size: 18px;
 	color: #1c2532;
 }
@@ -297,6 +297,7 @@ color: rgb(197, 213, 51);
 }
 .steps {
 	position: relative;
+	margin-bottom: 300px;
 }
 .steps p {
 	text-align: center;
@@ -313,7 +314,7 @@ color: rgb(197, 213, 51);
 }
 
 @media screen and (max-width: 1234px) and (min-width: 481px) {
-	.medium {width: 50% !important; }
+	.small {width: 50% !important; }
 	.company p {font-size: 14px;}
 	.sources {height: auto; min-height: 100px; font-size: 16px;}
 	.pos p {font-size: 16px;}
@@ -321,8 +322,8 @@ color: rgb(197, 213, 51);
 
 
 @media screen and (max-width: 760px) {
-	.medium {width: 100% !important; }
-	.medium1 {width: 100% !important;}
+	.small {width: 100% !important; }
+	.medium {width: 100% !important;}
 	.company p {font-size: 14px;}
 	.sources {height: auto; min-height: 60px;}
 	.line {display: none;}
@@ -332,20 +333,20 @@ color: rgb(197, 213, 51);
 } 
 
 @media screen and (max-width: 760px) and (min-width: 481px) {
-	.medium2 {width: 50% !important;}
+	.large {width: 50% !important;}
 } 
 
 @media screen and (max-width: 960px) {
 	.space{width: 100% !important;}
 	.space img {display: none;}
-	.mainblock .medium1 {width: 100% !important;}
+	.mainblock .medium {width: 100% !important;}
 	.mainblock {background: none; height: auto;}
+	.mainblock h1 {margin: 10px 0}
 	.back1 {height: auto;}
 } 
 
 @media screen and (max-width: 900px)  and (min-width: 761px) {
-	.medium2  {width: 33% !important; height: 200px;}
-
+	.large  {width: 33% !important; height: 200px;}
 } 
 
 
