@@ -31,9 +31,8 @@ h1 {
 	float: left;
 	padding: 0 0.7em;
 	margin: 0 0 1em;
-	width: 100%;
 }
-/*.container .cols.col-1 {width: 8.333333333333332%;}
+.container .cols.col-1 {width: 8.333333333333332%;}
 .container .cols.col-2 {width: 16.666666667%;}
 .container .cols.col-3 {width: 25%;}
 .container .cols.col-4 {width: 33.333333333%;}
@@ -44,7 +43,7 @@ h1 {
 .container .cols.col-9 {width: 75%;}
 .container .cols.col-10 {width: 83.33333333%;}
 .container .cols.col-11 {width: 91.666666667%;}
-.container .cols.col-12 {width: 100%;}*/
+.container .cols.col-12 {width: 100%;}
 
 .container:before, 
 .container:after,
@@ -208,35 +207,25 @@ color: rgb(197, 213, 51);
 	font-size: 48px;
 }
 
-@media screen and (min-width: 550px) {
-.container .cols.col-1 {width: 8.333333333333332%;}
-.container .cols.col-2 {width: 16.666666667%;}
-.container .cols.col-3 {width: 25%;}
-.container .cols.col-4 {width: 33.333333333%;}
-.container .cols.col-5 {width: 41.666666667%;}
-.container .cols.col-6 {width: 50%;}
-.container .cols.col-7 {width: 58.333333333%;}
-.container .cols.col-8 {width: 66.666666667%;}
-.container .cols.col-9 {width: 75%;}
-.container .cols.col-10 {width: 83.33333333%;}
-.container .cols.col-11 {width: 91.666666667%;}
-.container .cols.col-12 {width: 100%;}
+@media screen and (max-width: 550px) {
+	.container .cols {	width: 100% !important;}
+	.socialtext {display: none;}
 }
 
-
-
-
-
-@media screen and (max-width: 1231px) and (min-width: 550px) {
-	.medium {width: 50% !important; } 
-	.sources {height: auto; min-height: 150px;}
+@media screen and (max-width: 1231px) and (min-width: 551px) {
+	.medium {width: 50% !important; }
+	.medium2  {width: 50% !important;}
+	.company p {font-size: 18px;}
+	.sources {height: auto; min-height: 120px;}
 }
 
 
 @media screen and (max-width: 760px) {
+	.medium {width: 100% !important; }
 	.medium1 {width: 100% !important;}
-	.socialtext {display: none;}
+	.sources {height: auto; min-height: 60px; font-size: 12px}
 	.line {display: none;}
+
 } 
 
 @media screen and (max-width: 760px) and (min-width: 550px) {
