@@ -15,6 +15,22 @@ h1 {
 	font-size: 48px;
 }
 
+.container:before, 
+.container:after,
+.clear:before, 
+.clear:after, 
+.row:before,
+.row:after {
+	content: " ";
+	display: table;
+}
+
+.container:after, 
+.clear:after,
+.row:after {
+	clear: both;
+}
+
 .container {
 	width: auto;
 	max-width: 960px;
@@ -57,11 +73,115 @@ h1 {
 .mainblock {
 	color: white;
 	div {
-		@extend %half-size;
+		width: 50%;
+		float: left;
+	}
+}
+
+.companies {
+	div {	
+		float: left;
+		p {
+			max-width: 200px;
+		}
+	}
+}
+
+.background-2 {
+	background-color: rgb(0, 120, 215);
+	height: 100%;
+	margin-top: 40px;
+}
+
+.solutions {
+	color: white;
+	img {
+		float: left;
+	}
+	p {
+		padding-top: 40px;
+	}
+	span {
+		color: rgb(197, 213, 51);
+		font-weight: 600;
 	}
 }
 
 
+.resources {
+	div {
+		margin: 10px 0;
+		float: left;
+		color: rgb(0, 120, 215);
+			:hover {
+			border-color: rgb(123, 182, 60);
+			color: white;
+			background-color: rgb(123, 182, 60);
+			}
+
+		p {
+			font-weight: 600;
+			padding: 10px 30px;
+			border: 2px solid rgb(0, 120, 215);
+		}
+		&:nth-child(1) {
+			width: 64%;
+			margin-left: 0;
+			margin-right: 2%;
+		}
+		&:nth-child(2) {
+			width: 34%;
+			margin-right: 0;
+		}
+		&:nth-child(3) {
+			width: 37%;
+			margin-left: 0;
+		}
+		&:nth-child(4) {
+			width: 39%;
+			margin: 10px 2%; 
+		}
+		&:nth-child(5) {
+			width: 20%;
+			margin-right: 0;
+			float: right;
+		}
+	}
+}
+
+.steps {
+	text-align: center;
+	.test {
+		width: 20%;
+		float: left;
+	}
+}
+
+.circle {
+	width: 70px;
+	height: 70px;
+	background: #00abec;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	margin: 0 auto;
+}
+.circle p {
+	color: white;
+	padding-top: 5px !important;
+	text-align: center;
+}
+.line {	
+	position: absolute;
+	background: #00abec;
+	height: 3px;
+	width: 80%;
+	margin: 0 auto;
+	top: 50px;
+	left: 10%;
+	z-index: -1;
+	display: block;
+}
 
 
 
