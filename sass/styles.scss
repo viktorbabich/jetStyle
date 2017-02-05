@@ -35,7 +35,8 @@ $large: 870px;
 	box-sizing: border-box;
 }
 body {
-	font-family: 'Segoe Ui'
+	font-family: 'Segoe Ui';
+	overflow-x: hidden;
 }
 body p {
 	font-size: 18px;
@@ -43,6 +44,15 @@ body p {
 h1 {
 	font-weight: 300;
 	font-size: 48px;
+	margin: 40px 0;
+}
+@include mq-medium-down {
+	h1 {
+		text-align: center;
+	}
+} 
+.text-center {
+	text-align: center;
 }
 
 .container:before, 
@@ -72,43 +82,175 @@ h1 {
 
 .social {
 	min-height: 65px;
-	div:first-child {
-		width: 30%;
-		float: left;
-		padding: 20px 0;
-	}	
-	div:last-child {
-		width: 70%;
-		float: right;
-		padding: 20px 0;
-	}
-
-	div:last-child a {
-		float: right;
-		padding-left: 10px;
-	}
-	div span {
-		float: right;
-		padding-right: 5px;
+		div {
+		&:first-child {
+			width: 30%;
+			float: left;
+			
+		}	
+		&:last-child {
+			width: 70%;
+			float: right;
+			
+		}
+		img, span {
+			padding-top: 23px;
+		}
+		&:last-child a {
+			float: right;
+			padding-left: 10px;
+		}
+		span {
+			float: right;
+			padding-right: 5px;
+			color: #b1b0b1; 
+		}
 	}
 }
+
+//_______________________________________________основной блок
 
 
 .background-1 {
 	border-top: 5px solid #eee;
 	background: radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1);
 }
+.cloud1 {
+	position: absolute;
+	right: 85%;
+	top: 150px;
+	opacity: 0.2;
+ 	animation: cloud1 5s;
+ 	animation-iteration-count: infinite;
+}
+
+.cloud2 {
+	position: absolute;
+	left: 85%;
+	top: 100px;
+	opacity: 0.2;
+ 	animation: cloud2 5s;
+ 	animation-iteration-count: infinite;
+}
+
+@include mq-large-down {
+	.cloud1 {
+		top: 400px;
+		right: 75%;
+		animation: none;
+	}
+	.cloud2 {
+		top: 500px;
+		left: 75%;
+		animation: none;
+	}
+}
+@include mq-medium-down {
+	.cloud1, .cloud2 {
+		display: none;
+	}
+}
+
+@keyframes cloud1 {
+	from {	
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(20px)
+	} 
+	to {
+		transform: translateY(0)
+	} 
+}
+@keyframes cloud2 {
+	from {	
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-20px)
+	} 
+	to {
+		transform: translateY(0)
+	} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .mainblock {
 	color: white;
+	h1 {
+		margin: 90px 0 20px 0;
+	}
 	div {
 		width: 50%;
 		float: left;
 	}
+	img{
+		padding: 25px 25px 0 25px;
+	}
+	p {
+		padding-bottom: 20px;
+	}
 }
+@include mq-large-down {
+	.mainblock {
+		p {
+			padding: 10px;
+		}
+		h1 {
+			text-align: center;
+			margin: 20px 0;
+		}
+		div {
+			width: 100%;
+			.test5 {
+
+				text-align: center;
+				
+				img {
+					width: 100%;
+					max-width: 500px;
+				}
+			}
+		}
+	}
+}
+
 
 //_______________________________________________блок с компаниями
 
+.cloud3 {
+	width: 70%;
+	position: absolute;
+	right: 100%;
+	top: -80px;
+	opacity: 0.1;
+}
+.cloud4 {
+	width: 70%;
+	position: absolute;
+	left: 100%;
+	top: -10px;
+	opacity: 0.1;
+}
+@include mq-large-down {
+	.cloud3, .cloud4 {
+			display: none;
+		}
+}
+
+
 .companies {
+	position: relative;
 	display: flex;
 	flex-flow: row wrap;	
 	justify-content: space-between;
@@ -144,11 +286,20 @@ h1 {
 	}
 } 
 
-//_______________________________________________блок с решениями
+
+
+
+
+
+
+
+
+//_______________________________________________блок с картой
 
 .background-2 {
 	background-color: rgb(0, 120, 215);
 	margin-top: 40px;
+	position: relative;
 }
 .solutions {
 	color: white;
@@ -161,7 +312,7 @@ h1 {
 	}
 	p {
 		padding: 20px;
-		padding-top: 40px;
+		padding-top: 45px;
 	}
 	span {
 		color: rgb(197, 213, 51);
@@ -181,11 +332,12 @@ h1 {
 				padding: 0;
 			}
 			p {
-				padding-top: 20px;
+				padding-top: 0;
 			}
 		}
 	}
 }
+
 
 //_______________________________________________блок с ресурсами
 
@@ -228,8 +380,11 @@ h1 {
 	}
 }
 
-@media screen and (max-width: $large) {
-	.resources div p {min-height: 100px; padding-left: 10px}
+@include mq-large-down {
+	.resources div p {
+		min-height: 100px;
+		padding-left: 10px
+	}
 } 
 @include mq-small-up {
 	.resources {
@@ -281,7 +436,9 @@ h1 {
 
 
 .steps {
+	margin: 40px 0 150px 0;
 	text-align: center;
+	position: relative;
 	.test {
 		width: 20%;
 		float: left;
@@ -289,7 +446,11 @@ h1 {
 }
 
 @include mq-medium-down {
-	.steps { 
+	.steps {
+		margin: 20px 0;
+		.line {
+			display: none;
+		} 
 		.test {
 			width: 210px;
 			float: none;
@@ -298,16 +459,32 @@ h1 {
 			.circle {
 				float: left;
 			}
+			&:nth-child(2) p {
+				padding-top: 10px;
+			}
+			&:nth-child(3) p {
+				padding-top: 10px;
+			}
+			&:nth-child(5) p {
+				padding-top: 20px;
+			}
+			&:nth-child(6) p {
+				padding-top: 20px;
+			}
 			p {
+				text-align: left;
+				float: right;
+				width: 50%;
 
+			}
+			
+
+			span {
+				text-align: center;
 			}
 		}
 	}
 }
-
-
-
-
 .circle {
 	width: 70px;
 	height: 70px;
@@ -316,14 +493,10 @@ h1 {
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
 	margin: 0 auto;
-
-	p {
-	color: white;
-	padding-top: 5px !important;
-	text-align: center;
-	}
+	margin-bottom: 10px;
 	span {
 		font-size: 48px;
+		color: white;
 	}
 }
 .line {	
@@ -332,7 +505,7 @@ h1 {
 	height: 3px;
 	width: 80%;
 	margin: 0 auto;
-	top: 50px;
+	top: 35px;
 	left: 10%;
 	z-index: -1;
 	display: block;
