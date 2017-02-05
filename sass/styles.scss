@@ -9,7 +9,7 @@ $large: 870px;
   }
 }
 @mixin mq-small-up {
-  @media (min-width: $small) and (max-width: $medium - 1)  {
+  @media (min-width: $small) and (max-width: $medium - 1px)  {
     @content;
   }
 }
@@ -34,6 +34,26 @@ $large: 870px;
 	padding: 0;
 	box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'Segoe Ui';
+  src: url(resources/segoeui.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Segoe Ui';
+  src: url(resources/segoeuisl.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Segoe Ui';
+  src: url(resources/segoeuisb.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
 body {
 	font-family: 'Segoe Ui';
 	overflow-x: hidden;
@@ -54,7 +74,6 @@ h1 {
 .text-center {
 	text-align: center;
 }
-
 .container:before, 
 .container:after,
 .clear:before, 
@@ -64,21 +83,19 @@ h1 {
 	content: " ";
 	display: table;
 }
-
 .container:after, 
 .clear:after,
 .row:after {
 	clear: both;
 }
-
 .container {
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
-	// background-color: #ccc;
+	/* background-color: #ccc;*/
 }
 
-//_______________________________________________header
+/*_______________________________________________header*/
 
 .social {
 	min-height: 65px;
@@ -86,12 +103,10 @@ h1 {
 		&:first-child {
 			width: 30%;
 			float: left;
-			
 		}	
 		&:last-child {
 			width: 70%;
 			float: right;
-			
 		}
 		img, span {
 			padding-top: 23px;
@@ -108,11 +123,11 @@ h1 {
 	}
 }
 
-//_______________________________________________основной блок
-
+/*_______________________________________________основной блок*/
 
 .background-1 {
 	border-top: 5px solid #eee;
+	background: -webkit-radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1);
 	background: radial-gradient(closest-corner circle at 70% 100%, #09c9f5, #00bbf1);
 }
 .cloud1 {
@@ -120,29 +135,33 @@ h1 {
 	right: 85%;
 	top: 150px;
 	opacity: 0.2;
- 	animation: cloud1 5s;
- 	animation-iteration-count: infinite;
+ 	-webkit-animation: cloud1 5s;
+ 	        animation: cloud1 5s;
+ 	-webkit-animation-iteration-count: infinite;
+ 	        animation-iteration-count: infinite;
 }
-
 .cloud2 {
 	position: absolute;
 	left: 85%;
 	top: 100px;
 	opacity: 0.2;
- 	animation: cloud2 5s;
- 	animation-iteration-count: infinite;
+ 	-webkit-animation: cloud2 5s;
+ 	        animation: cloud2 5s;
+ 	-webkit-animation-iteration-count: infinite;
+ 	        animation-iteration-count: infinite;
 }
-
 @include mq-large-down {
 	.cloud1 {
 		top: 400px;
 		right: 75%;
-		animation: none;
+		-webkit-animation: none;
+		        animation: none;
 	}
 	.cloud2 {
 		top: 500px;
 		left: 75%;
-		animation: none;
+		-webkit-animation: none;
+		        animation: none;
 	}
 }
 @include mq-medium-down {
@@ -150,41 +169,62 @@ h1 {
 		display: none;
 	}
 }
-
-@keyframes cloud1 {
+@-webkit-keyframes cloud1 {
 	from {	
-		transform: translateY(0);
+		-webkit-transform: translateY(0);	
+		        transform: translateY(0);
 	}
 	50% {
-		transform: translateY(20px)
+		-webkit-transform: translateY(20px);
+		        transform: translateY(20px)
 	} 
 	to {
-		transform: translateY(0)
+		-webkit-transform: translateY(0);
+		        transform: translateY(0)
+	} 
+}
+@keyframes cloud1 {
+	from {	
+		-webkit-transform: translateY(0);	
+		        transform: translateY(0);
+	}
+	50% {
+		-webkit-transform: translateY(20px);
+		        transform: translateY(20px)
+	} 
+	to {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0)
+	} 
+}
+@-webkit-keyframes cloud2 {
+	from {	
+		-webkit-transform: translateY(0);	
+		        transform: translateY(0);
+	}
+	50% {
+		-webkit-transform: translateY(-20px);
+		        transform: translateY(-20px)
+	} 
+	to {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0)
 	} 
 }
 @keyframes cloud2 {
 	from {	
-		transform: translateY(0);
+		-webkit-transform: translateY(0);	
+		        transform: translateY(0);
 	}
 	50% {
-		transform: translateY(-20px)
+		-webkit-transform: translateY(-20px);
+		        transform: translateY(-20px)
 	} 
 	to {
-		transform: translateY(0)
+		-webkit-transform: translateY(0);
+		        transform: translateY(0)
 	} 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 .mainblock {
 	color: white;
 	h1 {
@@ -226,7 +266,7 @@ h1 {
 }
 
 
-//_______________________________________________блок с компаниями
+/*_______________________________________________блок с компаниями*/
 
 .cloud3 {
 	width: 70%;
@@ -247,19 +287,26 @@ h1 {
 			display: none;
 		}
 }
-
-
 .companies {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row wrap;	
-	justify-content: space-between;
+	-ms-flex-flow: row wrap;
+	    flex-flow: row wrap;	
+	-webkit-box-pack: justify;	
+	    -ms-flex-pack: justify;	
+	        justify-content: space-between;
 	div {
-		flex: 1;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
 		max-width: 200px;
+		margin: 0px 10px 40px 10px;
 		img {
 			border: 2px solid #d7d7d7;
-			filter: grayscale(100%);
+			-webkit-filter: grayscale(100%);
+			        filter: grayscale(100%);
 		}
 		p {
 			font-weight: 600;
@@ -269,7 +316,8 @@ h1 {
 
 		&:hover img {
 			border: 3px solid #7bb63c;
-			filter: none;
+			-webkit-filter: none;
+			        filter: none;
 			margin: -1px;
 		}
 		&:hover p {
@@ -279,22 +327,16 @@ h1 {
 }
 @include mq-large-down {
 	.companies {
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 			div {
-			margin: 0 20px;
+			margin: 10px 20px;
 		}
 	}
-} 
+}
 
-
-
-
-
-
-
-
-
-//_______________________________________________блок с картой
+/*_______________________________________________блок с картой*/
 
 .background-2 {
 	background-color: rgb(0, 120, 215);
@@ -339,7 +381,7 @@ h1 {
 }
 
 
-//_______________________________________________блок с ресурсами
+/*_______________________________________________блок с ресурсами*/
 
 .resources {
 	div {
@@ -375,7 +417,6 @@ h1 {
 		&:nth-child(5) {
 			width: 20%;
 			margin-right: 0;
-
 		}
 	}
 }
@@ -426,13 +467,7 @@ h1 {
 }
 
 
-
-
-
-
-
-
-//_______________________________________________блок с шагами
+/*_______________________________________________блок с шагами*/
 
 
 .steps {
@@ -477,8 +512,6 @@ h1 {
 				width: 50%;
 
 			}
-			
-
 			span {
 				text-align: center;
 			}
@@ -489,8 +522,6 @@ h1 {
 	width: 70px;
 	height: 70px;
 	background: #00abec;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
 	border-radius: 50px;
 	margin: 0 auto;
 	margin-bottom: 10px;
