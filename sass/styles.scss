@@ -1,4 +1,42 @@
 
+
+
+$small : 480px;
+$medium : 760px;
+$large: 870px;
+
+@mixin mq-small {
+  @media (min-width: $small) and (max-width: $medium - 1px) {
+    @content;
+  }
+}
+@mixin mq-small-up {
+  @media (min-width: $small) {
+    @content;
+  }
+}
+@mixin mq-medium {
+  @media (min-width: $medium) and (max-width: $large - 1px) {
+    @content;
+  }
+}
+@mixin mq-medium-up {
+  @media (min-width: $medium) {
+    @content;
+  }
+}
+@mixin mq-large-up {
+  @media (min-width: $large) {
+    @content;
+  }
+}
+
+
+
+
+
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -103,8 +141,9 @@ h1 {
 
 .solutions {
 	color: white;
-	img {
+	div {
 		float: left;
+		max-width: 70%;
 	}
 	p {
 		padding-top: 40px;
@@ -115,10 +154,36 @@ h1 {
 	}
 }
 
+@include mq-small {
+	.solutions { 
+		div {
+			max-width: 100%;
+			 &:first-child {
+			 	float: none;
+				margin: 0 auto;
+				max-width: 165px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .resources {
 	div {
-		margin: 10px 0;
+		margin: 10px 1%;
 		float: left;
 		color: rgb(0, 120, 215);
 			:hover {
@@ -135,7 +200,6 @@ h1 {
 		&:nth-child(1) {
 			width: 64%;
 			margin-left: 0;
-			margin-right: 2%;
 		}
 		&:nth-child(2) {
 			width: 34%;
@@ -147,12 +211,11 @@ h1 {
 		}
 		&:nth-child(4) {
 			width: 39%;
-			margin: 10px 2%; 
 		}
 		&:nth-child(5) {
 			width: 20%;
 			margin-right: 0;
-			float: right;
+
 		}
 	}
 }
@@ -197,37 +260,37 @@ h1 {
 
 
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: $large) {
 	.resources div p {min-height: 100px; padding-left: 10px}
 } 
 
 
 
-@media screen and (max-width: 760px) {
+@include mq-small {
 	.resources {
 		div {
-			margin: 0 !important;
-			float: left !important;
+			margin: 0;
+			
 
 			&:nth-child(1) {
-				width: 94%;
-				margin: 2% !important;
+				width: 96%;
+				margin: 2%;
 			}
 			&:nth-child(2) {
-				width: 45% ;
-				margin: 2% !important;
+				width: 46%;
+				margin: 2%;
 			}
 			&:nth-child(3) {
-				width: 45%;
-				margin: 2% !important;
+				width: 46%;
+				margin: 2%;
 			}
 			&:nth-child(4) {
-				width: 45% ;
-				margin: 2% !important;
+				width: 46%;
+				margin: 2%;
 			}
 			&:nth-child(5) {
-				width: 45% ;
-				margin: 2% !important;
+				width: 46% ;
+				margin: 2%;
 			}
 			p {
 				min-height: 120px;
